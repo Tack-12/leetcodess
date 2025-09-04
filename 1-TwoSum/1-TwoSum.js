@@ -1,14 +1,18 @@
-// Last updated: 9/3/2025, 9:02:02 PM
+// Last updated: 9/3/2025, 9:13:50 PM
 /**
- * @param {number[]} nums
- * @param {number} target
- * @return {number[]}
+ * @param {number} x
+ * @return {boolean}
  */
-var twoSum = function(nums, target) {
-    for (let i=0; i< nums.length;i++){
-        for (let j=1; j<= nums.length;j++)
-            if(nums[i]+nums[j]=== target && i !== j){
-                return([i,j])
-            }
+var isPalindrome = function(x) {
+    let y= x.toString();
+    let z='';
+    let output = false;
+    
+    for(let i = y.length-1; i>=0 ; i--){
+        z+= y[i];
     }
+
+    y==z ? output=true: output=false
+
+    return output;
 };
